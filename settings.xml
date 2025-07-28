@@ -1,0 +1,35 @@
+<settings>
+
+<servers>
+  <server>
+    <id>javawebapp1-devops-cicd-ancocita</id>
+    <username>aws</username>
+    <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+  </server>
+</servers>
+
+<profiles>
+  <profile>
+    <id>javawebapp1-devops-cicd-ancocita</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
+    <repositories>
+      <repository>
+        <id>javawebapp1-devops-cicd-ancocita</id>
+        <url>https://javawebapp1-262477924160.d.codeartifact.us-east-1.amazonaws.com/maven/devops-cicd-ancocita/</url>
+      </repository>
+    </repositories>
+  </profile>
+</profiles>
+
+<mirrors>
+  <mirror>
+    <id>javawebapp1-devops-cicd-ancocita</id>
+    <name>javawebapp1-devops-cicd-ancocita</name>
+    <url>https://javawebapp1-262477924160.d.codeartifact.us-east-1.amazonaws.com/maven/devops-cicd-ancocita/</url>
+    <mirrorOf>*</mirrorOf>
+  </mirror>
+</mirrors>
+
+</settings>
